@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Maoui</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="contact.css">
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="light-mode">
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="row">
+            <div class="col-md-6">
+                <h1 class="text-3xl font-bold mb-4">Contact Me</h1>
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="903f15b5-6bdd-4252-8ad5-9d675905943b">
+                
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <div class="mb-3">
+                        <input class="form-control" type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                
+                    <!-- Phone Number and Submit Button -->
+                    <div style="display: flex; margin-top: 60px;">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-phone"></i> 
+                            <span class="ms-2">+213 0668920307</span>
+                        </div>
+                        <button type="submit" class="btn theme-button" style="margin-left: auto;">Submit Form</button>
+                    </div>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                </form>
+            </div>
+
+            <div class="col-md-6 text-center" id="r1">
+                <h1 class="text-3xl font-bold mb-4" style="text-align: left;">digital communication tools</h1>
+                <!-- Main Image -->
+                <img src="mfd.png" alt="Profile Image" class="img-fluid mb-4" style="height: 250px; width: 400px;">
+
+                <!-- Media Icons -->
+                <div class="media " style="display: flex; ">
+                    <p>Hi i'm always avaible on :</p>
+                    <a href="https://www.messenger.com/t/alvaro.morata.igo" target="_blank" rel="noopener noreferrer">
+                        <img src="fb2.jpg" alt="Facebook" style="margin-left: 10px;">
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wiixou@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src="gm.jpg" alt="Gmail" style="margin-left: 10px;">
+                    </a>
+                    <a href="https://www.linkedin.com/in/yaghmourassen-maoui-648729296/" target="_blank" rel="noopener noreferrer">
+                        <img src="li.jpg" alt="LinkedIn" style="margin-left: 10px;">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="home.js"></script> <!-- For theme toggling and other JS -->
+    <script src="contact.js"></script> <!-- Specific JS for this page -->
+</body>
+</html>

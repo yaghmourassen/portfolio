@@ -1,0 +1,54 @@
+/* Ensures responsiveness */
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Styling for the form and images */
+form {
+    margin-bottom: 20px;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and images */
+    margin-top: 40px; /* Space above the media section to align with the phone number */
+    justify-content: flex-start; /* Align items to the left */
+}
+/* Style for rectangle images */
+.media img {
+    width: 60px;  /* Adjust width to fit the container */
+    height: 30px; /* Maintain aspect ratio */
+  
+}
+#r1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+/* Theme Button Styling */
+body.light-mode .theme-button {
+    background-color: #fff; /* Light button for dark mode */
+    color: #000;
+    border: #000 solid 1px;
+}
+
+body.dark-mode .theme-button {
+    background-color: #000; /* Dark button for light mode */
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .media img {
+        width: 50px;  /* Adjusted size for smaller screens */
+    }
+
+   
+}

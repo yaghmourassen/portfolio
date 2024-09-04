@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff; /* Keep the old background color */
+}
+
+.experience-section {
+    position: relative;
+    padding-bottom: 100px; /* Space for footer */
+    background-color: #ffffff; /* Keep the old background color */
+}
+
+.title-container {
+    margin-bottom: 70px; /* Space between image and axe line */
+    text-align: center; /* Center the image and title */
+}
+
+.title-image {
+    max-width: 280px; /* Adjust as needed */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.arrow-up {
+    position: absolute;
+    top: -15px; /* Adjusted for better placement */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid black; /* Arrow color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for arrow */
+}
+
+.axe-line {
+    position: relative;
+    margin-top: 70px; /* Space from the title image */
+    border-left: 3px solid black; /* Thicker line for better visibility */
+    width: 3px;
+    height: 500px; /* Fixed height for visibility; adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent; /* Ensure no background color on the axe line */
+}
+
+.indicator {
+    position: absolute;
+    width: 24px; /* Slightly larger for better visibility */
+    height: 24px;
+    background-color: #007bff; /* Change to a professional color */
+    border-radius: 50%;
+    border: 3px solid #ffffff; /* Add a border for better contrast */
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #28a745; /* Change to a professional active color */
+    transform: translate(-50%, -50%) scale(1.2); /* Slightly enlarge when active */
+}
+
+/* Position indicators based on blocks */
+#state1 {
+    top: calc(14% + 70px); /* Adjusted to match the position of #state1-container and spacing */
+    left: 50%;
+}
+
+#state2 {
+    top: calc(45% + 70px); /* Adjusted to match the position of #state2-container and spacing */
+    left: 50%;
+}
+
+#state3 {
+    top: calc(76% + 70px); /* Adjusted to match the position of #state3-container and spacing */
+    left: 50%;
+}
+
+.info-block-container {
+    position: absolute;
+    width: 320px; /* Slightly wider for better content display */
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for a modern look */
+    background: #ffffff; /* Keep the old background color */
+    border: 1px solid #e0e0e0; /* Lighter border for a softer look */
+    border-radius: 12px; /* Rounded corners */
+    color: black; /* Ensure text color remains black in all themes */
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+    cursor: pointer; /* Indicate that the block is interactive */
+}
+
+.left {
+    left: calc(50% - 360px); /* Position left blocks inside the axe */
+    text-align: right;
+}
+
+.right {
+    left: calc(50% + 40px); /* Position right blocks inside the axe */
+    text-align: left;
+}
+
+#state1-container {
+    top: 14%; /* Adjust to match the position of the indicator */
+    animation-delay: 0.3s;
+}
+
+#state2-container {
+    top: 45%; /* Adjust to match the position of the indicator */
+    animation-delay: 0.6s;
+}
+
+#state3-container {
+    top: 76%; /* Adjust to match the position of the indicator */
+    animation-delay: 0.9s;
+}
+
+.info-content {
+    margin-right: 15px; /* Space between content and indicator */
+}
+
+/* Responsive Design: Position all blocks on the right for small screens and move main content to top left */
+@media (max-width: 768px) {
+    .info-block-container {
+        width: 280px; /* Adjust width for smaller screens */
+        left: 20px; /* Position all blocks to the right */
+        text-align: left;
+    }
+
+    .left, .right {
+        left: 20px; /* Override both left and right classes */
+    }
+
+    .axe-line {
+        height: 600px; /* Adjust height if needed */
+        left: 20px; /* Move axe line to top left */
+        transform: none;
+    }
+
+    .indicator {
+        left: 20px; /* Adjust indicator position */
+    }
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Dark mode adjustments */
+body.dark-mode {
+    background-color: #333;
+}
+
+body.dark-mode .experience-section {
+    background-color: #333;
+}
+
+body.dark-mode .info-block-container {
+    background: #444;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+body.dark-mode .arrow-up {
+    border-bottom: 20px solid #fff; /* Adjust arrow color for dark mode */
+}
+
+body.dark-mode .indicator {
+    background-color: #ccc; /* Adjust indicator color for dark mode */
+}
+
+body.dark-mode .indicator.active {
+    background-color: #4CAF50; /* Adjust active indicator color for dark mode */
+}

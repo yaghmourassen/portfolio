@@ -1,0 +1,383 @@
+/* Ensure custom CSS is loaded after Bootstrap and Tailwind */
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+
+}
+
+
+
+
+/* Default Navbar styling */
+.navbar {
+    background-color: #ffffff !important; /* Light mode color */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px -2px orange; /* Light mode shadow */
+}
+.navbar-toggler {
+    border-color: orange; /* Light mode color for the toggler border */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='orange' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+body.dark-mode .navbar-toggler {
+    border-color: white; /* Dark mode color for the toggler border */
+}
+
+body.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Dark mode adjustments for navbar */
+body.dark-mode .navbar {
+    background-color: #000 !important; /* Dark mode color */
+    box-shadow: 0 4px 8px -2px white; /* Dark mode shadow */
+}
+
+.navbar-nav .nav-link:hover {
+    text-shadow: 0 0 5px rgba(255, 165, 0, 1), 0 0 10px rgba(255, 165, 0, 0.8); /* Light orange glow */
+}
+
+/* Dark mode adjustments for navbar links */
+body.dark-mode .navbar-nav .nav-link {
+    color: #ddd !important; /* Text color for dark mode */
+}
+
+/* Hover effect for dark mode */
+body.dark-mode .navbar-nav .nav-link:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8); /* Light white glow */
+}
+
+
+.navbar .navbar-brand:hover {
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and shadow */
+    color: orange !important; /* Text color on hover */
+    text-shadow: 0 0 5px rgba(255, 165, 0, 1), 0 0 10px rgba(255, 165, 0, 0.8); /* Light orange glow */
+}
+body.dark-mode .navbar .navbar-brand:hover {
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
+    color: #fff !important; /* Text color on hover */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8); /* Light white glow */
+}
+
+.navbar-nav .nav-link:hover {
+    color: orange !important; /* Text color on hover */
+    text-shadow: 0 0 5px rgba(255, 165, 0, 1), 0 0 10px rgba(255, 165, 0, 0.8); /* Light orange glow */
+}
+
+/* Navbar links styling */
+.navbar-nav .nav-link {
+    color: #000 !important; /* Text color for light mode */
+    transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+/* Specific styling for navbar brand */
+.navbar .navbar-brand {
+    color: #000 !important; /* Text color for light mode */
+}
+
+/* Dark mode adjustments for navbar */
+body.dark-mode .navbar {
+    background-color: #000 !important; /* Dark mode color */
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: #ddd !important; /* Dark mode text color */
+}
+
+body.dark-mode .navbar .navbar-brand {
+    color: #ddd !important; /* Dark mode text color */
+}
+
+
+
+
+/* Base Hero Section Styling */
+header {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack content vertically by default */
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  
+}
+
+
+
+
+
+/* Hero Section Text Styling */
+header .flex.flex-col {
+    text-align: center; /* Center text on small screens */
+    max-width: 80%; /* Limit text width on small screens */
+    margin-bottom: 1rem; /* Adjust space between text and image */
+}
+
+/* Ensure hero text color changes in dark mode */
+body.dark-mode header .text-center {
+    color: #ddd; /* Dark mode text color */
+}
+
+/* Header text */
+header h1 {
+    font-size: 2.5rem; /* Default font size for large screens */
+    
+}
+
+/* Dark mode body adjustments */
+body.dark-mode {
+    background-color: #333;
+    color: #fff; /* Text color for dark mode */
+}
+
+/* Icon styling */
+#sun-icon {
+    color: orange; /* Base color for the sun icon */
+}
+
+#moon-icon {
+    color: white; /* Base color for the moon icon */
+}
+
+#sun-icon, #moon-icon {
+    font-size: 24px; /* Adjust size as needed */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and lighting effect */
+}
+
+#sun-icon:hover {
+    text-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 30px rgba(255, 165, 0, 0.8); /* Strong orange glow effect */
+}
+
+#moon-icon:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8); /* Strong white glow effect */
+}
+
+/* Hero Section Image Styling */
+header img {
+    display: block; /* Ensure the image is displayed */
+    width: 80%; /* Adjust width for small screens */
+    max-width: 400px; /* Maximum width of the image */
+    height: auto;
+    border-radius: 0.5rem;
+    margin-top: 1rem; /* Adjust space above image */
+    box-shadow: 2px -2px 8px rgba(0, 0, 0, 0.5), 4px -4px 15px rgba(0, 0, 0, 0.4); /* Default shadow */
+}
+
+/* Light Mode Image Shadow */
+body.light-mode header img {
+    box-shadow: 2px -2px 8px rgba(255, 165, 0, 0.5), 4px -4px 15px rgba(255, 165, 0, 0.4); /* Orange shadow for light mode */
+}
+
+/* Dark Mode Image Shadow */
+body.dark-mode header img {
+    box-shadow: 2px -2px 8px rgba(255, 255, 255, 0.5), 4px -4px 15px rgba(255, 255, 255, 0.4); /* White shadow for dark mode */
+}
+
+/* Icon Styling */
+header .flex a {
+    font-size: 1.2rem; /* Smaller icon size */
+    color: inherit;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Light Mode Icons */
+body.light-mode header .flex a {
+    color: orange; /* Orange icons for light mode */
+}
+
+body.light-mode header .flex a:hover {
+    text-shadow: 0 0 5px rgba(255, 165, 0, 1), 0 0 10px rgba(255, 165, 0, 0.8); /* Glow effect */
+}
+
+/* Dark Mode Icons */
+body.dark-mode header .flex a {
+    color: white; /* White icons for dark mode */
+}
+
+body.dark-mode header .flex a:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+/* Sun and Moon Icon Styling */
+#sun-icon, #moon-icon {
+    font-size: 20px; /* Smaller icon size */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#sun-icon:hover {
+    text-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 30px rgba(255, 165, 0, 0.8); /* Orange glow */
+}
+
+#moon-icon:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8); /* White glow */
+}
+
+/* Adjust for larger screens */
+@media (min-width: 1024px) {
+    header {
+        flex-direction: row; /* Align content horizontally on larger screens */
+        justify-content: space-between;
+    }
+
+    header .flex.flex-col {
+        text-align: left; /* Align text to the left on larger screens */
+        max-width: 50%; /* Adjust text container width for larger screens */
+        margin-bottom: 0; /* Remove space between text and image */
+    }
+
+    header img {
+        margin-top: 0;
+        margin-left: 2rem; /* Add spacing between text and image */
+        max-width: 400px; /* Larger image size for larger screens */
+    }
+}
+
+/* Ensure image is visible and on top on small screens */
+@media (max-width: 1023px) {
+    header {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+    }
+
+    header img {
+        order: -1; /* Ensure image appears above text */
+        width: 50%; /* Adjust width for small screens */
+        max-width: none; /* Remove maximum width constraint */
+        margin-top: 0; /* Remove top margin */
+        margin-bottom: 1rem; /* Add space below image */
+    }
+
+   
+
+
+}
+
+
+
+
+
+
+
+/* Default Footer styling */
+footer.bg-dark {
+    background-color: #ffffff !important; /* Light mode color */
+    color: #000 !important; /* Light mode text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode adjustments for footer */
+body.dark-mode footer.bg-dark {
+    background-color: #000 !important; /* Dark mode color */
+    color: #ddd !important; /* Dark mode text color */
+}
+
+footer.bg-dark {
+ 
+    color: #000 !important; /* Light mode text color */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 -4px 8px -2px orange; /* Light mode shadow */
+}
+
+/* Dark mode adjustments for footer */
+body.dark-mode footer.bg-dark {
+    background-color: #000 !important; /* Dark mode color */
+    color: #ddd !important; /* Dark mode text color */
+    box-shadow: 0 -4px 8px -2px white; /* Dark mode shadow */
+}
+/* Ensure body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox for the body to push footer to the bottom */
+.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area */
+main {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+   
+    footer {
+        height: 80px;
+        flex-direction: column;
+        font-size: 14px;
+        padding: 15px;
+        margin-top: 260px;
+    }
+}
+
+/* Ensures the main content grows to push the footer to the bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+
+/* Light Mode Button Styles */
+body.light-mode .contact-btn {
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgb(0, 0, 0);
+}
+
+
+
+body.light-mode .cv-btn {
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgb(0, 0, 0);
+}
+
+
+
+/* Dark Mode Button Styles */
+body.dark-mode .contact-btn {
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+
+body.dark-mode .cv-btn {
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+
+
